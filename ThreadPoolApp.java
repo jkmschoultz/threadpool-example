@@ -2,6 +2,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ExecutorService;
 
 public class ThreadPoolApp {
+
+    /**
+     * Simulate jobs being run on threads in a threadpool.
+     * 
+     * @param args[0]   The number of jobs to simulate doing
+     * @param args[1]   The number of threads to simulate available for jobs
+     */
  	public static void main (String [] args) {
  		if (args.length < 2)
  			ThreadPoolApp.error();
@@ -25,6 +32,9 @@ public class ThreadPoolApp {
 		}
    	}
 
+    /**
+     * Throw error if valid arguments are missing.
+     */
  	private static void error() {
  		System.out.println("ThreadPoolApp must be run with two positive valued " +
  			" integer arguments. The first detailing the number of jobs " +
